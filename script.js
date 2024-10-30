@@ -10,6 +10,12 @@ function showNextImage() {
     nextButton.style.display = 'none';
     stopButton.style.display = 'inline-block';
 }
+function showBackImage() {
+    currentImage = 1;
+    mainImage.src = 'images/image1.jpg'; // Update to the new image source
+    stopButton.style.display = 'none';
+    nextButton.style.display = 'inline-block';
+}
 
 function showConfirmationModal() {
     const modal = document.createElement('div');
@@ -58,5 +64,5 @@ function showConfirmationModal() {
 }
 
 nextButton.addEventListener('click', showNextImage);
-stopButton.addEventListener('click', showConfirmationModal);
+stopButton.addEventListener('click', showBackImage);
 stopButton.style.display = 'none';
